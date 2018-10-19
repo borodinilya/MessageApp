@@ -1,0 +1,28 @@
+﻿<Window x:Class="MessageApp.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModels="clr-namespace:MessageApp.ViewModels"
+        xmlns:local="clr-namespace:MessageApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" DataContext="{DynamicResource MainWindowViewModel}">
+    
+    <Window.Resources>
+        <viewModels:MainViewModel x:Key="MainWindowViewModel"></viewModels:MainViewModel>
+        <Style x:Key="MainDockPanelStyle" TargetType="DockPanel">
+            <Setter Property="Margin" Value="0"></Setter>
+            <Setter Property="Background" Value="#FF5B9BD5"/>
+        </Style>
+    </Window.Resources>
+    <DockPanel Style="{StaticResource MainDockPanelStyle}">
+        <DockPanel DockPanel.Dock="Bottom" HorizontalAlignment="Stretch">
+            <Border DockPanel.Dock="Right">
+                <Button  Content="Отправить" Command="{Binding AddCommand, Mode=OneWay}" />
+            </Border>
+            <TextBox Text="{Binding NewMessage}"></TextBox>
+        </DockPanel>
+        <ListBox ItemTemplate="{DynamicResource MessageDataTemplate}" ItemsSource="{Binding MessageViewModels}" HorizontalContentAlignment="Stretch" SelectionMode="Extended" />
+    </DockPanel>
+    
+</Window>
