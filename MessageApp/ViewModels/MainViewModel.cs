@@ -89,7 +89,15 @@ namespace MessageApp.ViewModels
 
         private void OnAdd()
         {
-            _messageControl?.AddMessage(NewMessage);
+            if (string.IsNullOrEmpty(NewMessage?.Trim(' ')))
+            {
+                Warning.Warning.Show("Пустое сообщение!");
+            }
+            else
+            {
+                _messageControl?.AddMessage(NewMessage);
+                NewMessage = "";
+            }
         }
 
         #endregion

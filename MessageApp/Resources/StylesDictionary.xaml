@@ -4,16 +4,28 @@
     <Style x:Key="MainStyle">
         <Setter Property="Control.Margin" Value="10"></Setter>
     </Style>
-    <Style TargetType="DockPanel" BasedOn="{StaticResource MainStyle}"></Style>
+    <Style TargetType="DockPanel" BasedOn="{StaticResource MainStyle}">
+        
+    </Style>
     <Style TargetType="Button" BasedOn="{StaticResource MainStyle}">
         <Setter Property="Padding" Value="5" ></Setter>
         <Setter Property="FontFamily" Value="Arial Black" ></Setter>
         <Setter Property="FontSize" Value="16" ></Setter>
+        <Setter Property="Height" Value="40" ></Setter>
     </Style>
-    <Style TargetType="TextBox">
-        <Setter Property="Margin" Value="0"></Setter>
+    <Style x:Key="TextBase">
+        <Setter Property="Control.Margin" Value="0"></Setter>
+        <Setter Property="Control.FontFamily" Value="Arial Black" ></Setter>
+        <Setter Property="Control.FontSize" Value="14" ></Setter>
     </Style>
-    <Style TargetType="ListBox" BasedOn="{StaticResource MainStyle}">
+    <Style TargetType="TextBox" BasedOn="{StaticResource TextBase}">
+        <Setter Property="TextWrapping" Value="Wrap"/>
+    </Style>
+    <Style x:Key="TextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource TextBase}">
+        <Setter Property="Background" Value="#FFFFFFFF"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+    </Style>
+    <Style TargetType="ItemsControl" BasedOn="{StaticResource MainStyle}">
         <Setter Property="Background" Value="#FF92D050"/>
     </Style>
     <Style TargetType="Border">

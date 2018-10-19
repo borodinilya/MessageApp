@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageApp.DataBase", "Mess
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageApp.BusinessLogic", "MessageApp.BusinessLogic\MessageApp.BusinessLogic.csproj", "{1FCCF571-FD29-4821-9BBC-E1506400799D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageApp.Warning", "MessageApp.Warning\MessageApp.Warning.csproj", "{763D9E3E-67B1-4EEB-B787-60BD0EF72940}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1FCCF571-FD29-4821-9BBC-E1506400799D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FCCF571-FD29-4821-9BBC-E1506400799D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FCCF571-FD29-4821-9BBC-E1506400799D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{763D9E3E-67B1-4EEB-B787-60BD0EF72940}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{763D9E3E-67B1-4EEB-B787-60BD0EF72940}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{763D9E3E-67B1-4EEB-B787-60BD0EF72940}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{763D9E3E-67B1-4EEB-B787-60BD0EF72940}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

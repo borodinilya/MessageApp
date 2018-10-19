@@ -4,11 +4,14 @@
                     xmlns:viewModels="clr-namespace:MessageApp.ViewModels"
                     >
     <DataTemplate x:Key="MessageDataTemplate" DataType="viewModels:MessageViewModel">
-        <DockPanel >
+        <DataTemplate.Resources>
+            
+        </DataTemplate.Resources>
+        <DockPanel>
             <Border DockPanel.Dock="Right">
-                <Button  Content="Удалить" Command="{Binding DeleteCommand, Mode=OneWay}" />
+                <Button  Content="Удалить" Command="{Binding DeleteCommand, Mode=OneWay}"  />
             </Border>
-            <TextBox Text="{Binding Message}"></TextBox>
+            <TextBlock Text="{Binding Message}" Style="{DynamicResource TextBlockStyle}" />
         </DockPanel>
     </DataTemplate>
 </ResourceDictionary>

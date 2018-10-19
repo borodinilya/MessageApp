@@ -22,7 +22,10 @@
             </Border>
             <TextBox Text="{Binding NewMessage}"></TextBox>
         </DockPanel>
-        <ListBox ItemTemplate="{DynamicResource MessageDataTemplate}" ItemsSource="{Binding MessageViewModels}" HorizontalContentAlignment="Stretch" SelectionMode="Extended" />
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <ItemsControl ItemTemplate="{DynamicResource MessageDataTemplate}" ItemsSource="{Binding MessageViewModels}" HorizontalContentAlignment="Stretch" />
+        </ScrollViewer>
+        
     </DockPanel>
     
 </Window>
